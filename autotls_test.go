@@ -142,7 +142,7 @@ func TestGenerateSelfSignedCert_TLSUsable(t *testing.T) {
 	}
 
 	// Verify it can be used as a tls.Certificate
-	if cert.Certificate == nil || len(cert.Certificate) == 0 {
+	if len(cert.Certificate) == 0 {
 		t.Fatal("Certificate is not properly formatted for TLS")
 	}
 
